@@ -21,7 +21,7 @@ setTimeout(()=>{
 const music = new Audio("./access/music.mp3")
 music.volume = 0.3
 music.currentTime = 3
-music.autoplay  =true
+// music.autoplay  =true
 
 function togglePlay() {
   if (FLAG.music){
@@ -38,6 +38,7 @@ function togglePlay() {
 }
 
 document.body.addEventListener("click",togglePlay())
+
 const text = `
   Hôm nay chính là một ngày rất đặc biệt - ngày 8/3 hay còn được biết tới với cái tên là ngày Quốc tế Phụ nữ! Bên cạnh những lời yêu thương vô bờ bến, CLB Lập trình trên thiết bị di động cũng xin gửi lời chúc đến tất cả các bạn nữ và các cô giảng viên sẽ luôn luôn thành công trong công việc, hạnh phúc trong tình yêu và luôn nở rộ như những đóa hoa xinh đẹp ❤❤
 `.trim()
