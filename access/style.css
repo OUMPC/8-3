@@ -386,7 +386,6 @@ body{
   font-size: 1.8rem;
   color: #fff;
   text-shadow: 0 0 5px #02020266;
-  animation: recommend 1s infinite;
   opacity: 0;
   animation: fadeIn 1s 5s ease forwards;
 }

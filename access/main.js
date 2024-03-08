@@ -12,6 +12,12 @@ const FLAG = {
   text:false,
 }
 
+setTimeout(()=>{
+  $("#recommendClick").css({
+    "animation":'recommend 1s infinite'
+  })
+},5000)
+
 const music = new Audio("./access/music.mp3")
 music.volume = 0.3
 music.currentTime = 3
