@@ -41,6 +41,7 @@ const container= document.querySelector(".container")
 btn.onclick = ()=>{
   container.classList.toggle('active');
   generateText()
+  $("#recommendClick").hide()
 }
 
 function generateText() {
