@@ -21,9 +21,13 @@ function togglePlay() {
   if (FLAG.music){
     return
   }else{
-    music.play()
-    FLAG.music = true
-    document.body.removeEventListener("mousemove",togglePlay())
+    try {
+      music.play()
+      FLAG.music = true
+      document.body.removeEventListener("mousemove",togglePlay())
+    } catch (error) {
+      
+    }
   }
 }
 
