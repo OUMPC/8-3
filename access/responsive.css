@@ -34,11 +34,11 @@
     }
     .container .letter{
         width: 90%;
-        height: 70%;
+        height: fit-content;
     }
     .container .letter p{
         font-size: 2.5rem;
-        padding: 5rem;
+        /* padding: 5rem; */
     }
     .container .letter h2{
         font-size: 3rem;
@@ -47,6 +47,6 @@
         font-size: 2rem;
     }
     .letter .icon img{
-        margin-top: 40%;
+        /* margin-top: 40%; */
       }    
   }

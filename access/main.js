@@ -7,12 +7,40 @@ window.addEventListener("focus", () =>{
   document.title = currentTitle;
 });
 
+const FLAG = {
+  music:false,
+  text:false,
+}
+
+const text = `
+  Hôm nay chính là một ngày rất đặc biệt - ngày 8/3 hay còn được biết tới với cái tên là ngày Quốc tế Phụ nữ! Bên cạnh những lời yêu thương vô bờ bến, LB Lập trình trên thiết bị di động cũng xin gửi lời chúc đến tất cả các bạn nữ và các cô giảng viên sẽ luôn luôn thành công trong công việc, hạnh phúc trong tình yêu và luôn nở rộ như những đóa hoa xinh đẹp ❤❤
+`.trim()
+
 //Onclick
-const btn=document.getElementsByClassName('container')
-for(let i=0;i<btn.length;i++){
-  btn[i].onclick = function(){
-    this.classList.toggle('active');
-    }
+const canvas2 = document.getElementById('canvas_flower');
+const flowers = new InteractiveFlowers(canvas2);
+
+const btn= document.querySelector("#interactZone")
+const container= document.querySelector(".container")
+btn.onclick = ()=>{
+  container.classList.toggle('active');
+  generateText()
+}
+
+function generateText() {
+    if (FLAG.text) return
+    FLAG.text = true
+    let t = text
+    const step = 1    
+    setInterval(()=>{     
+      if (t.length != 0) {
+        $("#text").text($("#text").text() + t.substring(0,Math.min(t.length,step)))
+        t = t.substring(Math.min(t.length,step))
+        clearInterval()
+      }else{
+        $("#pen").hide();;
+      }
+    },50)
 }
 
 //Background
@@ -80,5 +108,5 @@ function mainScene() {
     });
 }
 
-var master = new TimelineLite();
-master.add(mainScene(), "mainScene");
+// var master = new TimelineLite();
+// master.add(mainScene(), "mainScene");
